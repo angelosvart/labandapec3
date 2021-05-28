@@ -1,0 +1,22 @@
+@layer components {
+    .logo {
+        @apply font-logo text-dark tracking-widest text-2xl font-semibold;
+        @include logo($color-dark);
+    }
+    
+    .pageTitle {
+        @apply text-center text-4xl font-light md:text-7xl;
+    }
+
+    .card {
+        @apply m-4 flex flex-col border-dark border rounded flex-card bg-dark shadow-lg;
+    }
+
+    .footerButton {
+        @apply rounded bg-dark text-center text-light py-2 px-4 w-full block;
+    }
+
+    .number {
+        @apply border border-primary p-2 mr-4 rounded-full h-10 w-10 flex items-center justify-center;
+    }
+}

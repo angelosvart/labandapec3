@@ -1,0 +1,21 @@
+@use "sass:color";
+
+@mixin logo($color) {
+	background-size: 20px 2px, 100% 2px, 0 2px;
+	background-position: calc(20px * -1) 100%, 100% 100%, 0 100%;
+	background-repeat: no-repeat;
+	transition: background-size 0.5s linear, background-position 0.5s linear;
+	background-image: linear-gradient(
+		$color,
+		color.adjust($color, $lightness: -50%, $alpha: 0.3)
+	);
+	&:hover {
+		background-image: linear-gradient(
+			color.adjust($color, $lightness: -50%, $alpha: 0.3),
+			$color
+		);
+		background-size: 100% 2px, 0 2px;
+		background-position: 100% 100%, 0 100%;
+		background-repeat: no-repeat;
+	}
+}
